@@ -1,0 +1,75 @@
+{
+    "projects": [
+        {
+            "title": "SECUDRIVE (Mobile App)",
+            "coreConcept": "A high-end, dual-mode ride-sharing platform for car and motorcycle transport.",
+            "detailedPoints": [
+                "Designed and implemented a cross-platform mobile architecture using Flutter and Dart, ensuring a seamless 60FPS experience on both iOS and Android.",
+                "Developed a real-time price negotiation engine, allowing dynamic interaction between passengers and drivers to find market-fair rates.",
+                "Integrated Google Maps SDK for real-time geolocation tracking, optimized route calculation, and geofencing.",
+                "Engineered a secure backend with Firebase, utilizing Cloud Firestore for real-time synchronization and Firebase Auth for multi-factor user verification."
+            ],
+            "lucideIcon": "Smartphone",
+            "showcase": {
+                "image": "",
+                "url": ""
+            }
+        },
+        {
+            "title": "LEGAL DIGITALIZATION ECOSYSTEM (Public Administration)",
+            "coreConcept": "Lead Full-Stack Architect",
+            "detailedPoints": [
+                "Spearheaded the technical roadmap for a mission-critical platform digitizing legal procedures within a high-security government sector.",
+                "Architected a secure document management system that transitioned physical file processing to a 100% digital workflow, significantly reducing administrative overhead.",
+                "Implemented strict RBAC (Role-Based Access Control) and encryption protocols to guarantee the absolute confidentiality of citizen data.",
+                "Bridged complex legal requirements with technical specifications, acting as the Lead Business Analyst and Developer."
+            ],
+            "lucideIcon": "Scale",
+            "showcase": {
+                "image": "",
+                "url": ""
+            }
+        },
+        {
+            "title": "ADVANCED API INFRASTRUCTURE (Brink's Morocco)",
+            "coreConcept": "Backend & API Specialist",
+            "detailedPoints": [
+                "Engineered a high-availability API Gateway using a hybrid of RESTful and GraphQL architectures to facilitate seamless communication between heterogeneous financial services.",
+                "Refactored legacy SQL queries and implemented server-side caching strategies, resulting in a 40% reduction in database latency for critical financial logs.",
+                "Developed advanced authentication and encryption layers to secure sensitive data exchange across the Brink's network."
+            ],
+            "lucideIcon": "Cpu",
+            "showcase": {
+                "image": "",
+                "url": ""
+            }
+        },
+        {
+            "title": "INDUSTRIAL UX & DATA VISUALIZATION (OCP Group)",
+            "coreConcept": "Frontend Developer & UI Specialist",
+            "detailedPoints": [
+                "Designed and deployed intuitive industrial dashboards for one of the world's largest phosphate exporters, optimizing for high-pressure environments.",
+                "Ensured 100% cross-device compatibility (Desktop, Tablet, Mobile) using Tailwind CSS and custom responsive breakpoints.",
+                "Translated complex industrial KPIs into actionable, visual data representations, improving operational decision-making speed."
+            ],
+            "lucideIcon": "LayoutDashboard",
+            "showcase": {
+                "image": "",
+                "url": ""
+            }
+        },
+        {
+            "title": "THE CONFIDENTIAL VAULT (NDA-Protected)",
+            "coreConcept": "",
+            "detailedPoints": [
+                "Beyond this showcase, I have architected several high-stakes solutions within the Fintech and Governmental sectors that are protected under strict Non-Disclosure Agreements.",
+                "These projects involve deep-tier security frameworks, proprietary algorithms, and enterprise-grade scalability. While the source code is private, I can discuss the architectural logic and security philosophies applied to these systems during a technical interview."
+            ],
+            "lucideIcon": "Lock",
+            "showcase": {
+                "image": "",
+                "url": ""
+            }
+        }
+    ]
+}

@@ -7,15 +7,18 @@ const Card: React.FC<{ job: CardType; rtl?: boolean }> = ({
 }) => {
 	const [expanded, setExpanded] = React.useState(false);
 
-	const Showcase = () => (
-		<div className="border border-primary p-2 bg-primary bg-opacity-5 rounded-xl">
-			<img
-				src={job.showcase.image}
-				alt={job.company}
-				className="w-[95vw] md:max-w-sm max-h-[270px] object-cover object-top rounded mb-2"
-			/>
-		</div>
-	);
+	const Showcase = () => {
+		if (!job.showcase.image) return null;
+		return (
+			<div className="border border-primary p-2 bg-primary bg-opacity-5 rounded-xl">
+				<img
+					src={job.showcase.image}
+					alt={job.company}
+					className="w-[95vw] md:max-w-sm max-h-[270px] object-cover object-top rounded mb-2"
+				/>
+			</div>
+		);
+	};
 	const Details = () => (
 		<div className="flex-1 flex flex-col items-center md:items-start justify-start">
 			<h3 className="font-extrabold tracking-wider underline-offset-4 mb-2 text-2xl text-primary">

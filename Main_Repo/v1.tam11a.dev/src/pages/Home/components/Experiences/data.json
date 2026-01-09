@@ -1,55 +1,13 @@
 {
 	"jobs": [
 		{
-			"company": "SECUDRIVE (Mobile App)",
+			"company": "Confidential Public Administration",
 			"company_url": "",
-			"company_location": "Morocco.",
-			"description": "The next-generation ride-sharing platform for the Moroccan market. Engineered a dual-transport logic that differentiates from standard platforms by offering Motorcycle transport options alongside cars, optimizing for urban traffic efficiency.",
+			"company_location": "Khouribga, Béni Mellal-Khénifra, Morocco.",
+			"description": "Technical leadership and development of a digitization solution for sensitive public administration procedures (Justice/Legal Sector). Coordination of the technical team, roadmap definition and translation of complex legal requirements into technical features (Business Analysis). Design of a secure document management platform, reducing paper processing and optimizing internal workflows. Implementation of strict protocols to guarantee the integrity and confidentiality of sensitive citizen data.",
 			"positions": [],
 			"showcase": {
-				"image": "/tasks/secudrive.png",
-				"url": ""
-			},
-			"stack": [
-				"Flutter",
-				"Firebase",
-				"Google Maps API",
-				"Real-time WebSockets"
-			],
-			"highlights": [
-				"Designed a real-time price negotiation algorithm",
-				"Cross-platform deployment (iOS/Android) with a single codebase"
-			]
-		},
-		{
-			"company": "API Ecosystem @ Brink's Morocco",
-			"company_url": "",
-			"company_location": "Casablanca, Morocco.",
-			"description": "Mission-critical API architecture for a global security leader. Transformed legacy data exchange into a high-performance GraphQL/RESTful hybrid ecosystem, prioritizing encryption and data integrity for sensitive financial transactions.",
-			"positions": [],
-			"showcase": {
-				"image": "/tasks/api-ecosystem.png",
-				"url": ""
-			},
-			"stack": [
-				"Java Spring Boot",
-				"GraphQL",
-				"Redis",
-				"PostgreSQL"
-			],
-			"highlights": [
-				"Reduced API latency by 40% through advanced query optimization",
-				"Implemented 'Security by Design' protocols for critical data flows"
-			]
-		},
-		{
-			"company": "Legal Workflow Automation",
-			"company_url": "",
-			"company_location": "Casablanca-Settat, Morocco.",
-			"description": "Full-stack digitalization of complex legal and administrative procedures for Confidential Public Administration (Ministry of Justice sector). Bridged the gap between rigid legal requirements and modern user experience. Built a secure, high-concurrency platform for sensitive file management.",
-			"positions": [],
-			"showcase": {
-				"image": "/tasks/legal-workflow.png",
+				"image": "",
 				"url": ""
 			},
 			"stack": [
@@ -59,18 +17,42 @@
 				"Docker"
 			],
 			"highlights": [
-				"Led the transition from paper-based to 100% digital workflows",
-				"Architected a role-based access control (RBAC) system for high-level security"
+				"Project Management: Coordination of the technical team and roadmap definition",
+				"Architecture & Development: Design of a secure document management platform",
+				"Data Security: Implementation of strict protocols for integrity and confidentiality",
+				"Technical Environment: Full Stack development, Management of complex relational databases, API setup for interoperability"
 			]
 		},
 		{
-			"company": "Industrial Interfaces @ OCP Group",
+			"company": "Brink's Morocco",
 			"company_url": "",
-			"company_location": "Casablanca, Morocco.",
-			"description": "Responsive, high-availability web tools for the world's leading phosphate exporter. Created accessible and intuitive digital twins for industrial data, ensuring 100% responsiveness across all hardware (Desktop to Tablet).",
+			"company_location": "Casablanca-Settat, Morocco.",
+			"description": "Optimization of data exchange architecture and reinforcement of system security through the development of advanced programming interfaces. Design and development of scalable RESTful and GraphQL APIs to facilitate interactions between heterogeneous services. Analysis and refactoring of database queries to reduce latency times and optimize server performance. Implementation of strict security standards for critical data flows (Authentication, Encryption).",
 			"positions": [],
 			"showcase": {
-				"image": "/tasks/ocp-interfaces.png",
+				"image": "",
+				"url": ""
+			},
+			"stack": [
+				"Java Spring Boot",
+				"GraphQL",
+				"Redis",
+				"PostgreSQL"
+			],
+			"highlights": [
+				"API Architecture: Design and development of scalable RESTful and GraphQL APIs",
+				"Performance & Optimization: Analysis and refactoring of queries to reduce latency by 40%",
+				"Exchange Security: Implementation of strict security standards (Authentication, Encryption)"
+			]
+		},
+		{
+			"company": "OCP Group",
+			"company_url": "",
+			"company_location": "Khouribga, Béni Mellal-Khénifra, Morocco.",
+			"description": "Development of intuitive digital interfaces within a demanding industrial environment, focused on user experience (UX) and accessibility. Creation of dynamic and 'Responsive' web pages, adapted for multi-device use (Desktop, Mobile, Tablet). Compliance with web development standards to ensure compatibility and navigation fluidity within the corporate network.",
+			"positions": [],
+			"showcase": {
+				"image": "",
 				"url": ""
 			},
 			"stack": [
@@ -79,8 +61,10 @@
 				"Figma"
 			],
 			"highlights": [
-				"Translated complex industrial KPIs into clean, actionable dashboards",
-				"Maintained strict technical compliance within a massive corporate network"
+				"Front-end Development: Creation of dynamic and Responsive web pages",
+				"Technical Compliance: Compliance with standards for compatibility and fluidity",
+				"Translation of complex KPIs into actionable dashboards",
+				"Maintenance of technical compliance in a massive corporate network"
 			]
 		}
 	]

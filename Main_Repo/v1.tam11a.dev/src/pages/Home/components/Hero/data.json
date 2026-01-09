@@ -18,9 +18,9 @@
 		}
 	],
 	"companies": [
-		"logos:java",
-		"logos:php",
-		"logos:javascript",
-		"simple-icons:bubble"
+		"lucide:coffee",
+		"lucide:code",
+		"lucide:zap",
+		"lucide:bubble"
 	]
 }

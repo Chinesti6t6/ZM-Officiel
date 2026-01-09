@@ -1,0 +1,49 @@
+{
+    "categories": [
+        {
+            "name": "Programming Languages",
+            "skills": [
+                "JavaScript (Node.js, React, Vue.js)",
+                "PHP (Laravel)",
+                "Java (Spring Boot)"
+            ]
+        },
+        {
+            "name": "Backend Development",
+            "skills": [
+                "API Design (REST, GraphQL)",
+                "Database Management (MySQL, PostgreSQL)",
+                "Authentication & Security",
+                "Performance Optimization"
+            ]
+        },
+        {
+            "name": "Frontend Development",
+            "skills": [
+                "Responsive Web Design",
+                "UI/UX Implementation",
+                "Cross-platform Compatibility",
+                "Modern Frameworks (React, Vue.js)"
+            ]
+        },
+        {
+            "name": "Project Management & Analysis",
+            "skills": [
+                "Business Analysis",
+                "Project Coordination",
+                "Requirements Translation",
+                "Agile Methodologies"
+            ]
+        },
+        {
+            "name": "Certifications & Specialties",
+            "skills": [
+                "Certified Web Analyst (CWA)",
+                "Digital Skills: Artificial Intelligence (Accenture)",
+                "Physical Computing",
+                "JavaScript (Intermediate)",
+                "Frontend Developer Certification"
+            ]
+        }
+    ]
+}

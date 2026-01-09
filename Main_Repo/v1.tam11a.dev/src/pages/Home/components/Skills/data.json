@@ -1,11 +1,13 @@
 {
     "categories": [
         {
-            "name": "Languages",
+            "name": "Languages & Frameworks",
             "skills": [
                 "Java (Spring)",
                 "PHP (Laravel)",
-                "JavaScript (Node.js)"
+                "JavaScript (Node.js)",
+                "React",
+                "Vue.js"
             ]
         },
         {
@@ -13,7 +15,20 @@
             "skills": [
                 "API Design (REST/GraphQL)",
                 "Database Optimization (SQL)",
-                "System Security"
+                "System Security",
+                "Business Analysis",
+                "Project Management",
+                "Full-Stack Development"
+            ]
+        },
+        {
+            "name": "Certifications",
+            "skills": [
+                "Digital Skills: Artificial Intelligence (Accenture)",
+                "Physical Computing",
+                "Certified Web Analyst (CWA)",
+                "JavaScript (Intermediate)",
+                "Frontend Developer"
             ]
         }
     ]

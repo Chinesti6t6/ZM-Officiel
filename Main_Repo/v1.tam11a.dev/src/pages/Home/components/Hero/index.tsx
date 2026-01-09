@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 				>
 					<motion.img
 						src="/assets/MyProfile_pic.jpeg"
-						className="max-w-[220px] w-[95vw] rounded-full"
+						className="max-w-[220px] w-[95vw] rounded-full filter brightness-110 contrast-105 saturate-110"
 						initial={{
 							// scale: 0.5,
 							height: "10px",
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
 					<div key={index}>
 						<Icon
 							icon={company}
-							className="h-16"
+							className="h-24 w-24 text-gray-400 hover:text-primary transition-colors duration-300"
 						/>
 					</div>
 				))}

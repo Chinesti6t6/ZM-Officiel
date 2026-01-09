@@ -3,46 +3,142 @@
         {
             "name": "Programming Languages",
             "skills": [
-                "JavaScript (Node.js, React, Vue.js)",
-                "PHP (Laravel)",
-                "Java (Spring Boot)"
+                {
+                    "name": "JavaScript (Node.js, React, Vue.js)",
+                    "icon": "Code"
+                },
+                {
+                    "name": "PHP (Laravel)",
+                    "icon": "FileCode"
+                },
+                {
+                    "name": "Java (Spring Boot)",
+                    "icon": "Coffee"
+                },
+                {
+                    "name": "TypeScript",
+                    "icon": "Type"
+                },
+                {
+                    "name": "Python",
+                    "icon": "Terminal"
+                }
             ]
         },
         {
             "name": "Backend Development",
             "skills": [
-                "API Design (REST, GraphQL)",
-                "Database Management (MySQL, PostgreSQL)",
-                "Authentication & Security",
-                "Performance Optimization"
+                {
+                    "name": "API Design (REST, GraphQL)",
+                    "icon": "Network"
+                },
+                {
+                    "name": "Database Management (MySQL, PostgreSQL)",
+                    "icon": "Database"
+                },
+                {
+                    "name": "Authentication & Security",
+                    "icon": "Shield"
+                },
+                {
+                    "name": "Performance Optimization",
+                    "icon": "Zap"
+                },
+                {
+                    "name": "Microservices Architecture",
+                    "icon": "Server"
+                },
+                {
+                    "name": "Caching Strategies",
+                    "icon": "HardDrive"
+                }
             ]
         },
         {
             "name": "Frontend Development",
             "skills": [
-                "Responsive Web Design",
-                "UI/UX Implementation",
-                "Cross-platform Compatibility",
-                "Modern Frameworks (React, Vue.js)"
+                {
+                    "name": "Responsive Web Design",
+                    "icon": "Monitor"
+                },
+                {
+                    "name": "UI/UX Implementation",
+                    "icon": "Palette"
+                },
+                {
+                    "name": "Cross-platform Compatibility",
+                    "icon": "Globe"
+                },
+                {
+                    "name": "Modern Frameworks (React, Vue.js)",
+                    "icon": "Layers"
+                },
+                {
+                    "name": "State Management",
+                    "icon": "Boxes"
+                },
+                {
+                    "name": "Progressive Web Apps",
+                    "icon": "Smartphone"
+                }
             ]
         },
         {
             "name": "Project Management & Analysis",
             "skills": [
-                "Business Analysis",
-                "Project Coordination",
-                "Requirements Translation",
-                "Agile Methodologies"
+                {
+                    "name": "Business Analysis",
+                    "icon": "TrendingUp"
+                },
+                {
+                    "name": "Project Coordination",
+                    "icon": "Users"
+                },
+                {
+                    "name": "Requirements Translation",
+                    "icon": "FileText"
+                },
+                {
+                    "name": "Agile Methodologies",
+                    "icon": "GitBranch"
+                },
+                {
+                    "name": "Technical Documentation",
+                    "icon": "BookOpen"
+                },
+                {
+                    "name": "Stakeholder Communication",
+                    "icon": "MessageSquare"
+                }
             ]
         },
         {
-            "name": "Certifications & Specialties",
+            "name": "DevOps & Tools",
             "skills": [
-                "Certified Web Analyst (CWA)",
-                "Digital Skills: Artificial Intelligence (Accenture)",
-                "Physical Computing",
-                "JavaScript (Intermediate)",
-                "Frontend Developer Certification"
+                {
+                    "name": "CI/CD Pipelines",
+                    "icon": "GitMerge"
+                },
+                {
+                    "name": "Docker & Containerization",
+                    "icon": "Box"
+                },
+                {
+                    "name": "Version Control (Git)",
+                    "icon": "GitBranch"
+                },
+                {
+                    "name": "Cloud Services (AWS, Azure)",
+                    "icon": "Cloud"
+                },
+                {
+                    "name": "Monitoring & Logging",
+                    "icon": "Activity"
+                },
+                {
+                    "name": "Automated Testing",
+                    "icon": "CheckCircle"
+                }
             ]
         }
     ]

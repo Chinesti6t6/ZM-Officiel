@@ -9,7 +9,7 @@ const Card: React.FC<{ job: CardType; rtl?: boolean }> = ({
 
 	const Showcase = () => (
 		job.showcase.image ? (
-			<div className="border border-primary p-2 bg-primary bg-opacity-5 rounded-xl">
+			<div className="border border-[var(--card-border)] p-2 bg-[var(--card-bg)] rounded-xl">
 				<img
 					src={job.showcase.image}
 					alt={job.company}
@@ -20,13 +20,13 @@ const Card: React.FC<{ job: CardType; rtl?: boolean }> = ({
 	);
 	const Details = () => (
 		<div className="flex-1 flex flex-col items-center md:items-start justify-start">
-			<h3 className="font-extrabold tracking-wider underline-offset-4 mb-2 text-2xl text-primary">
+			<h3 className="font-extrabold tracking-wider underline-offset-4 mb-2 text-2xl text-[var(--accent)]">
 				{job.company}
 			</h3>
-			<h4 className="font-semibold text-slate-400 text-sm">
+			<h4 className="font-semibold text-[var(--text-muted)] text-sm">
 				{job.company_location}
 			</h4>
-			<p className="text-justify text-sm mt-2 mb-6">{job.description}</p>
+			<p className="text-justify text-sm mt-2 mb-6 text-[var(--text)]">{job.description}</p>
 			<AnimatePresence>
 				{expanded && (
 					<motion.div
@@ -37,18 +37,18 @@ const Card: React.FC<{ job: CardType; rtl?: boolean }> = ({
 						className="overflow-hidden"
 					>
 						<div className="mb-4">
-							<h4 className="font-semibold text-primary mb-2">Technical Stack:</h4>
+							<h4 className="font-semibold text-[var(--accent)] mb-2">Technical Stack:</h4>
 							<div className="flex flex-wrap gap-2">
 								{job.stack.map((tech, idx) => (
-									<span key={idx} className="bg-primary bg-opacity-10 text-primary px-2 py-1 rounded text-xs">
+									<span key={idx} className="bg-[var(--muted)] text-[var(--accent)] px-2 py-1 rounded text-xs border border-[var(--card-border)]">
 										{tech}
 									</span>
 								))}
 							</div>
 						</div>
 						<div className="mb-4">
-							<h4 className="font-semibold text-primary mb-2">Key Highlights:</h4>
-							<ul className="list-disc list-inside text-sm text-slate-200">
+							<h4 className="font-semibold text-[var(--accent)] mb-2">Key Highlights:</h4>
+							<ul className="list-disc list-inside text-sm text-[var(--text)]">
 								{job.highlights.map((highlight, idx) => (
 									<li key={idx}>{highlight}</li>
 								))}
@@ -59,7 +59,7 @@ const Card: React.FC<{ job: CardType; rtl?: boolean }> = ({
 			</AnimatePresence>
 			<button
 				onClick={() => setExpanded(!expanded)}
-				className="px-4 py-2 bg-primary bg-opacity-10 text-primary rounded-full font-semibold tracking-widest hover:bg-opacity-20 transition-colors duration-300"
+				className="px-4 py-2 bg-[var(--muted)] text-[var(--accent)] rounded-full font-semibold tracking-widest hover:bg-[var(--accent)] hover:text-white transition-all duration-300 border border-[var(--card-border)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
 			>
 				{expanded ? 'Show Less' : 'Learn More'}
 			</button>

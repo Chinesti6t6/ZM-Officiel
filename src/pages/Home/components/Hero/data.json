@@ -5,22 +5,24 @@
 		"Zakaria",
 		"ZM"
 	],
-	"about": "Senior Full-Stack Developer & IT Project Analyst. A solution creator who bridges business needs with technical reality.",
+	"headline": "I'm Zakaria — Senior Full-Stack Developer & IT Project Analyst",
+	"subheading": "I build secure, scalable web apps for fintech & public sector — bridging business needs with technical reality.",
+	"credibility": [
+		"4+ yrs production",
+		"API & Backend Specialist",
+		"Casablanca, Morocco"
+	],
 	"email": "zakmirinioui@gmail.com",
 	"socials": [
 		{
 			"name": "Github",
-			"url": "https://github.com/zakaria"
+			"url": "https://github.com/zakaria",
+			"icon": "Github"
 		},
 		{
 			"name": "LinkedIn",
-			"url": "https://www.linkedin.com/in/zakaria"
+			"url": "https://www.linkedin.com/in/zakaria",
+			"icon": "Linkedin"
 		}
-	],
-	"companies": [
-		"logos:java",
-		"logos:php",
-		"logos:javascript",
-		"simple-icons:bubble"
 	]
 }

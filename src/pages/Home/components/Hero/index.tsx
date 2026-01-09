@@ -1,78 +1,239 @@
-import React from "react";
-import data from "./data.json";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Icon } from "@iconify/react";
+import { Github, Linkedin, Mail, ChevronDown, Download, ArrowRight } from "lucide-react";
+import { useTheme } from "../../../../hooks/useTheme";
 
 const Hero: React.FC = () => {
-	const [dpLoading, setDpLoading] = React.useState(true);
+	const [dpLoading, setDpLoading] = useState(true);
+	const [avatarHover, setAvatarHover] = useState(false);
+	const { isDark } = useTheme();
 
 	return (
 		<>
-			<div className="px-2 flex flex-col items-center text-center justify-center gap-6 min-h-[80vh]">
+			<div className="px-4 sm:px-6 flex flex-col items-center text-center justify-center gap-8 min-h-[85vh] relative">
+				{/* Glassmorphism card behind hero content - visible in light mode */}
+				{!isDark && (
+					<div className="absolute inset-0 -z-10 backdrop-blur-xl bg-[var(--card-bg)] border border-[var(--card-border)] rounded-3xl opacity-80 transition-opacity duration-[400ms]" />
+				)}
+
+				{/* Animated Avatar with Halo */}
 				<motion.div
-					layout
-					className="overflow-hidden p-2 rounded-full border-4 border-primary-500 w-fit h-fit"
+					className="relative mb-4"
+					onMouseEnter={() => setAvatarHover(true)}
+					onMouseLeave={() => setAvatarHover(false)}
+					initial={{ opacity: 0, scale: 0.8 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ type: "spring", stiffness: 100, damping: 15 }}
 				>
-					<motion.img
-						src="/assets/MyProfile_pic.jpeg"
-						className="max-w-[220px] w-[95vw] rounded-full"
-						initial={{
-							// scale: 0.5,
-							height: "10px",
+					{/* Animated Halo */}
+					<motion.div
+						className="absolute inset-0 rounded-full"
+						style={{
+							background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)",
+							opacity: 0.3,
+							filter: "blur(20px)",
 						}}
 						animate={{
-							// scale: 1,
-							height: dpLoading ? "10px" : "auto",
+							scale: avatarHover ? [1, 1.15, 1] : [1, 1.1, 1],
+							opacity: avatarHover ? [0.3, 0.5, 0.3] : [0.2, 0.4, 0.2],
 						}}
-						onLoad={() => setDpLoading(false)}
-						transition={{ type: "spring", stiffness: 50, when: "" }}
+						transition={{
+							duration: 2,
+							repeat: Infinity,
+							ease: "easeInOut",
+						}}
 					/>
-				</motion.div>
-				<h1 className="text-2xl mt-8">
-					Hi, I'm <span className="font-bold text-primary">{data.name}</span>
-				</h1>
-				<h2 className="text-4xl font-semibold max-w-md">{data.about}</h2>
-				<div>
-					{data.socials?.map((social, index) => (
-						<React.Fragment key={index}>
-							{index !== 0 && (
-								<span className="text-slate-400 font-semibold">/</span>
-							)}
-							<Link
-								to={social.url}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="inline-block text-primary 
-                            font-semibold mx-2 hover:text-primary-500 transition-colors duration-300 tracking-widest"
-							>
-								{social.name}
-							</Link>
-						</React.Fragment>
-					))}
-				</div>
-			</div>
-			<div className="mix-blend-luminosity flex flex-row flex-wrap items-center justify-evenly gap-7 px-2">
-				{data?.companies?.map((company, index) => (
-					<div key={index}>
-						<Icon
-							icon={company}
-							className="h-16"
+					
+					{/* Avatar Container with Border */}
+					<motion.div
+						className="relative overflow-hidden rounded-full border-[6px] border-[var(--accent)]"
+						style={{
+							width: "clamp(180px, 220px, 95vw)",
+							height: "clamp(180px, 220px, 95vw)",
+							transformStyle: "preserve-3d",
+							perspective: "600px",
+						}}
+						animate={{
+							rotateX: avatarHover ? 5 : 0,
+							rotateY: avatarHover ? -5 : 0,
+						}}
+						transition={{ type: "spring", stiffness: 300, damping: 20 }}
+					>
+						<motion.img
+							src="/assets/MyProfile_pic.jpeg"
+							alt="Zakaria Mirinioui"
+							className="w-full h-full object-cover rounded-full"
+							style={{
+								objectPosition: "center 15%",
+							}}
+							initial={{
+								height: "10px",
+							}}
+							animate={{
+								height: dpLoading ? "10px" : "auto",
+							}}
+							onLoad={() => setDpLoading(false)}
+							transition={{ type: "spring", stiffness: 50 }}
 						/>
-					</div>
-				))}
-			</div>
-			<div className="flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto px-2 my-20 gap-14">
-				<p className="max-w-md text-xl md:text-2xl font-semibold text-center md:text-left">
-					Collaborate with brands & agencies to create impactful result.
-				</p>
-				<Link
-					to={`mailto:${data.email}`}
-					className="px-10 py-3 bg-primary bg-opacity-10 rounded-full border-2 border-primary text-primary font-extrabold tracking-widest"
+					</motion.div>
+				</motion.div>
+
+				{/* Headline */}
+				<motion.h1
+					className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-4xl"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.2 }}
 				>
-					EMAIL ME
-				</Link>
+					I'm Zakaria —{" "}
+					<span className="text-[var(--accent)]">Senior Full-Stack Developer</span> &{" "}
+					<span className="text-[var(--accent)]">IT Project Analyst</span>
+				</motion.h1>
+
+				{/* Subheading */}
+				<motion.p
+					className="text-lg sm:text-xl text-[var(--text-muted)] max-w-2xl leading-relaxed"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.3 }}
+				>
+					I build secure, scalable web apps for fintech & public sector — bridging business needs with technical reality.
+				</motion.p>
+
+				{/* Credibility Chips */}
+				<motion.div
+					className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-2"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.4 }}
+				>
+					<span className="px-4 py-2 bg-[var(--muted)] text-[var(--text)] rounded-full text-sm font-medium border border-[var(--card-border)]">
+						4+ yrs production
+					</span>
+					<span className="px-4 py-2 bg-[var(--muted)] text-[var(--text)] rounded-full text-sm font-medium border border-[var(--card-border)]">
+						API & Backend Specialist
+					</span>
+					<span className="px-4 py-2 bg-[var(--muted)] text-[var(--text)] rounded-full text-sm font-medium border border-[var(--card-border)]">
+						Casablanca, Morocco
+					</span>
+				</motion.div>
+
+				{/* CTAs */}
+				<motion.div
+					className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.5 }}
+				>
+					<a
+						href="/assets/MZakria-Resume.pdf"
+						download
+						className="group px-6 py-3 bg-[var(--accent)] text-white rounded-full font-semibold tracking-wide hover:bg-[var(--accent-hover)] transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+					>
+						<Download size={18} />
+						Download Resume
+					</a>
+					<a
+						href="mailto:zakmirinioui@gmail.com"
+						className="group px-6 py-3 border-2 border-[var(--accent)] text-[var(--accent)] rounded-full font-semibold tracking-wide hover:bg-[var(--accent)] hover:text-white transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+					>
+						Contact me
+						<ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+					</a>
+				</motion.div>
+
+				{/* Social Links */}
+				<motion.div
+					className="flex items-center justify-center gap-6 mt-4"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.6 }}
+				>
+					<a
+						href="https://github.com/zakaria"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="p-3 rounded-full bg-[var(--muted)] text-[var(--text)] hover:bg-[var(--accent)] hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+						aria-label="GitHub Profile"
+					>
+						<Github size={20} />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/zakaria"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="p-3 rounded-full bg-[var(--muted)] text-[var(--text)] hover:bg-[var(--accent)] hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+						aria-label="LinkedIn Profile"
+					>
+						<Linkedin size={20} />
+					</a>
+				</motion.div>
+
+				{/* Available for hire badge */}
+				<motion.div
+					className="mt-4"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 0.7 }}
+				>
+					<span className="text-xs text-[var(--text-muted)] font-medium">
+						Available for hire — open to remote & hybrid
+					</span>
+				</motion.div>
 			</div>
+
+			{/* Featured Project Card */}
+			<motion.div
+				className="max-w-2xl mx-auto px-4 sm:px-6 mb-16"
+				initial={{ opacity: 0, y: 30 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, margin: "-50px" }}
+				transition={{ duration: 0.6, ease: "easeOut" }}
+			>
+				<div className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:border-[var(--accent)] transition-all duration-300">
+					<div className="flex items-start justify-between gap-4 mb-3">
+						<div className="flex-1">
+							<h3 className="text-xl sm:text-2xl font-bold text-[var(--text)] mb-2">
+								Featured Project
+							</h3>
+							<p className="text-[var(--text-muted)] text-sm sm:text-base mb-4">
+								Secure, scalable fintech platform with real-time transaction processing and advanced security protocols.
+							</p>
+						</div>
+					</div>
+					<div className="flex items-center justify-between">
+						<span className="text-sm font-medium text-[var(--accent)]">View Case Study →</span>
+						<span className="text-xs text-[var(--text-muted)]">99% uptime • 10k+ users</span>
+					</div>
+				</div>
+			</motion.div>
+
+			{/* Scroll Hint */}
+			<motion.div
+				className="flex justify-center mb-8"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 1 }}
+			>
+				<motion.div
+					animate={{
+						y: [0, 10, 0],
+					}}
+					transition={{
+						duration: 2,
+						repeat: Infinity,
+						ease: "easeInOut",
+					}}
+					className="flex flex-col items-center gap-2 cursor-pointer"
+					onClick={() => {
+						window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+					}}
+				>
+					<span className="text-xs text-[var(--text-muted)] font-medium">Scroll to explore</span>
+					<ChevronDown size={24} className="text-[var(--accent)]" />
+				</motion.div>
+			</motion.div>
 		</>
 	);
 };

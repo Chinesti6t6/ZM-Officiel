@@ -7,7 +7,7 @@ const WebsiteFooter = lazy(() => import("./Footer"));
 const WebsiteLayout: React.FC = () => {
 	return (
 		<>
-			<section className="bg-[url(/grid.svg)] bg-repeat-y bg-cover">
+			<section className="bg-[url(/grid.svg)] bg-repeat-y bg-cover" style={{ backgroundBlendMode: 'overlay', backgroundColor: 'var(--surface)' }}>
 				<WebsiteHeader />
 				<main className="max-w-6xl mx-auto min-h-[95vh]">
 					<Outlet />

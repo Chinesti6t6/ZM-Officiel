@@ -4,9 +4,38 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	/* Default dark theme variables */
+	--bg: #000000;
+	--surface: #0e0000;
+	--text: #ffffff;
+	--text-muted: #9ca3af;
+	--accent: #ff0000;
+	--accent-hover: #ff3333;
+	--muted: #1f2937;
+	--card-border: rgba(255, 0, 0, 0.2);
+	--card-bg: rgba(14, 0, 0, 0.5);
+}
+
+/* Theme transition */
+* {
+	transition-property: background-color, border-color, color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 400ms;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+	}
+}
+
 body {
-	background: linear-gradient(239deg, #0e0000 -18.38%, #000 95.03%);
+	background: linear-gradient(239deg, var(--surface) -18.38%, var(--bg) 95.03%);
 	min-height: 100vh;
-	color: #fff;
+	color: var(--text);
 	font-family: "K2D", sans-serif;
 }

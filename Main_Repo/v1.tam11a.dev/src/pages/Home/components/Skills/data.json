@@ -1,0 +1,20 @@
+{
+    "categories": [
+        {
+            "name": "Languages",
+            "skills": [
+                "Java (Spring)",
+                "PHP (Laravel)",
+                "JavaScript (Node.js)"
+            ]
+        },
+        {
+            "name": "Specialties",
+            "skills": [
+                "API Design (REST/GraphQL)",
+                "Database Optimization (SQL)",
+                "System Security"
+            ]
+        }
+    ]
+}

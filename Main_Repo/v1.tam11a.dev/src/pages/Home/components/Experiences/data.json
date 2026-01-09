@@ -1,0 +1,87 @@
+{
+	"jobs": [
+		{
+			"company": "SECUDRIVE (Mobile App)",
+			"company_url": "",
+			"company_location": "Morocco.",
+			"description": "The next-generation ride-sharing platform for the Moroccan market. Engineered a dual-transport logic that differentiates from standard platforms by offering Motorcycle transport options alongside cars, optimizing for urban traffic efficiency.",
+			"positions": [],
+			"showcase": {
+				"image": "/tasks/secudrive.png",
+				"url": ""
+			},
+			"stack": [
+				"Flutter",
+				"Firebase",
+				"Google Maps API",
+				"Real-time WebSockets"
+			],
+			"highlights": [
+				"Designed a real-time price negotiation algorithm",
+				"Cross-platform deployment (iOS/Android) with a single codebase"
+			]
+		},
+		{
+			"company": "API Ecosystem @ Brink's Morocco",
+			"company_url": "",
+			"company_location": "Casablanca, Morocco.",
+			"description": "Mission-critical API architecture for a global security leader. Transformed legacy data exchange into a high-performance GraphQL/RESTful hybrid ecosystem, prioritizing encryption and data integrity for sensitive financial transactions.",
+			"positions": [],
+			"showcase": {
+				"image": "/tasks/api-ecosystem.png",
+				"url": ""
+			},
+			"stack": [
+				"Java Spring Boot",
+				"GraphQL",
+				"Redis",
+				"PostgreSQL"
+			],
+			"highlights": [
+				"Reduced API latency by 40% through advanced query optimization",
+				"Implemented 'Security by Design' protocols for critical data flows"
+			]
+		},
+		{
+			"company": "Legal Workflow Automation",
+			"company_url": "",
+			"company_location": "Casablanca-Settat, Morocco.",
+			"description": "Full-stack digitalization of complex legal and administrative procedures for Confidential Public Administration (Ministry of Justice sector). Bridged the gap between rigid legal requirements and modern user experience. Built a secure, high-concurrency platform for sensitive file management.",
+			"positions": [],
+			"showcase": {
+				"image": "/tasks/legal-workflow.png",
+				"url": ""
+			},
+			"stack": [
+				"PHP Laravel",
+				"MySQL",
+				"Vue.js",
+				"Docker"
+			],
+			"highlights": [
+				"Led the transition from paper-based to 100% digital workflows",
+				"Architected a role-based access control (RBAC) system for high-level security"
+			]
+		},
+		{
+			"company": "Industrial Interfaces @ OCP Group",
+			"company_url": "",
+			"company_location": "Casablanca, Morocco.",
+			"description": "Responsive, high-availability web tools for the world's leading phosphate exporter. Created accessible and intuitive digital twins for industrial data, ensuring 100% responsiveness across all hardware (Desktop to Tablet).",
+			"positions": [],
+			"showcase": {
+				"image": "/tasks/ocp-interfaces.png",
+				"url": ""
+			},
+			"stack": [
+				"JavaScript (React/Node)",
+				"Tailwind CSS",
+				"Figma"
+			],
+			"highlights": [
+				"Translated complex industrial KPIs into clean, actionable dashboards",
+				"Maintained strict technical compliance within a massive corporate network"
+			]
+		}
+	]
+}

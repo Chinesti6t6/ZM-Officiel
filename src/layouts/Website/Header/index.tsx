@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../../../hooks/useTheme";
 
 const WebsiteHeader: React.FC = () => {
-	const { theme, toggleTheme, isDark } = useTheme();
+	const { toggleTheme, isDark } = useTheme();
 
 	const handleKeyDown = (e: React.KeyboardEvent) => {
 		if (e.key === "Enter" || e.key === " ") {

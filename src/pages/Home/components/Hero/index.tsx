@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ChevronDown, Download, ArrowRight } from "lucide-react";
+import { Github, Linkedin, ChevronDown, Download, ArrowRight } from "lucide-react";
 import { useTheme } from "../../../../hooks/useTheme";
 
 const Hero: React.FC = () => {

@@ -9,4 +9,9 @@ export default defineConfig({
 		open: "/",
 	},
   plugins: [react(), tsconfigPaths()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+  },
 })

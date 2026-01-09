@@ -7,19 +7,20 @@
 	],
 	"about": "Senior Full-Stack Developer & IT Project Analyst. A solution creator who bridges business needs with technical reality.",
 	"email": "zakmirinioui@gmail.com",
-	"socials": {
-		"name": "Github",
-		"url": "https://github.com/BITIZE5776s"
-	},
-	{
-		"name": "LinkedIn",
-		"url": "https://www.linkedin.com/in/zakaria-mirinioui"
-	}
-],
-"companies": [
-	"logos:java",
-	"logos:php",
-	"logos:javascript",
-	"simple-icons:bubble"
-]
+	"socials": [
+		{
+			"name": "Github",
+			"url": "https://github.com/zakaria"
+		},
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/zakaria"
+		}
+	],
+	"companies": [
+		"logos:java",
+		"logos:php",
+		"logos:javascript",
+		"simple-icons:bubble"
+	]
 }

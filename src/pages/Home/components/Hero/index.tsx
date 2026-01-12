@@ -1,12 +1,28 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, ChevronDown, Download, ArrowRight } from "lucide-react";
 import { useTheme } from "../../../../hooks/useTheme";
 
 const Hero: React.FC = () => {
 	const [dpLoading, setDpLoading] = useState(true);
 	const [avatarHover, setAvatarHover] = useState(false);
+	const [downloadMenuOpen, setDownloadMenuOpen] = useState(false);
+	const downloadMenuRef = useRef<HTMLDivElement>(null);
 	const { isDark } = useTheme();
+
+	// Close dropdown when clicking outside
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (downloadMenuRef.current && !downloadMenuRef.current.contains(event.target as Node)) {
+				setDownloadMenuOpen(false);
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
 
 	return (
 		<>
@@ -125,15 +141,51 @@ const Hero: React.FC = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.5 }}
 				>
-					<a
-						href="/MiriniouiZakaria.pdf"
-						download="MiriniouiZakaria.pdf"
-						className="group px-6 py-3 bg-[var(--accent)] text-white rounded-full font-semibold tracking-wide hover:bg-[var(--accent-hover)] transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
-						aria-label="Download Resume PDF"
-					>
-						<Download size={18} />
-						Download Resume
-					</a>
+					{/* Download Button with Dropdown */}
+					<div className="relative" ref={downloadMenuRef}>
+						<button
+							onClick={() => setDownloadMenuOpen(!downloadMenuOpen)}
+							className="group px-6 py-3 bg-[var(--accent)] text-white rounded-full font-semibold tracking-wide hover:bg-[var(--accent-hover)] transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+							aria-label="Download Resume PDF"
+							aria-expanded={downloadMenuOpen}
+						>
+							<Download size={18} />
+							Download Resume
+							<ChevronDown 
+								size={16} 
+								className={`transition-transform duration-300 ${downloadMenuOpen ? 'rotate-180' : ''}`}
+							/>
+						</button>
+						
+						<AnimatePresence>
+							{downloadMenuOpen && (
+								<motion.div
+									initial={{ opacity: 0, y: -10, scale: 0.95 }}
+									animate={{ opacity: 1, y: 0, scale: 1 }}
+									exit={{ opacity: 0, y: -10, scale: 0.95 }}
+									transition={{ duration: 0.2 }}
+									className="absolute top-full left-0 mt-2 w-48 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl shadow-xl overflow-hidden z-50 backdrop-blur-sm"
+								>
+									<a
+										href="/MiriniouiZakaria-EN.pdf"
+										download="MiriniouiZakaria-EN.pdf"
+										onClick={() => setDownloadMenuOpen(false)}
+										className="block px-4 py-3 text-[var(--text)] hover:bg-[var(--accent)] hover:text-white transition-all duration-200 font-medium text-sm border-b border-[var(--card-border)]"
+									>
+										English Version
+									</a>
+									<a
+										href="/MiriniouiZakaria-FR.pdf"
+										download="MiriniouiZakaria-FR.pdf"
+										onClick={() => setDownloadMenuOpen(false)}
+										className="block px-4 py-3 text-[var(--text)] hover:bg-[var(--accent)] hover:text-white transition-all duration-200 font-medium text-sm"
+									>
+										French Version
+									</a>
+								</motion.div>
+							)}
+						</AnimatePresence>
+					</div>
 					<a
 						href="mailto:zakmirinioui@gmail.com"
 						className="group px-6 py-3 border-2 border-[var(--accent)] text-[var(--accent)] rounded-full font-semibold tracking-wide hover:bg-[var(--accent)] hover:text-white transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"

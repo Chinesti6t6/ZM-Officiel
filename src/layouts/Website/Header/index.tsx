@@ -1,5 +1,5 @@
 import React from "react";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../../../hooks/useTheme";
 
@@ -18,7 +18,14 @@ const WebsiteHeader: React.FC = () => {
 			<h1 className="text-2xl sm:text-3xl font-extrabold text-[var(--text)]">
 				Z<span className="text-[var(--accent)]">.</span>
 			</h1>
-			<nav>
+			<nav className="flex items-center gap-3">
+				<a
+					href="tel:+212629258876"
+					aria-label="Phone number"
+					className="relative p-3 rounded-full bg-[var(--muted)] text-[var(--text)] hover:bg-[var(--accent)] hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+				>
+					<Phone size={20} />
+				</a>
 				<button
 					role="button"
 					tabIndex={0}

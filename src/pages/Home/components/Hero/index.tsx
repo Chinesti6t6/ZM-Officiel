@@ -126,9 +126,10 @@ const Hero: React.FC = () => {
 					transition={{ delay: 0.5 }}
 				>
 					<a
-						href="/assets/MZakria-Resume.pdf"
-						download
+						href="/MiriniouiZakaria.pdf"
+						download="MiriniouiZakaria.pdf"
 						className="group px-6 py-3 bg-[var(--accent)] text-white rounded-full font-semibold tracking-wide hover:bg-[var(--accent-hover)] transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+						aria-label="Download Resume PDF"
 					>
 						<Download size={18} />
 						Download Resume
@@ -150,7 +151,7 @@ const Hero: React.FC = () => {
 					transition={{ delay: 0.6 }}
 				>
 					<a
-						href="https://github.com/zakaria"
+						href="https://github.com/BITIZE5776s"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="p-3 rounded-full bg-[var(--muted)] text-[var(--text)] hover:bg-[var(--accent)] hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
@@ -159,7 +160,7 @@ const Hero: React.FC = () => {
 						<Github size={20} />
 					</a>
 					<a
-						href="https://www.linkedin.com/in/zakaria"
+						href="https://www.linkedin.com/in/zakaria-mirinioui/"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="p-3 rounded-full bg-[var(--muted)] text-[var(--text)] hover:bg-[var(--accent)] hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
